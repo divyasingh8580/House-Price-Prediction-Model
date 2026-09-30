@@ -1,0 +1,13 @@
+Example input values:
+
+MedInc = 5.0
+HouseAge = 20
+AveRooms = 5.5
+AveBedrms = 1.0
+Population = 1000
+AveOccup = 3.0
+Latitude = 34.0
+Longitude = -118.0
+
+Note:
+These are only example values. Prediction quality depends on realistic values from the dataset's feature ranges.

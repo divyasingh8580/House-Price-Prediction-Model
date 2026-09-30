@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>House Price Prediction</h1>
+    <p class="subtitle">Enter the house details to predict the median house value.</p>
+
+    <form method="POST">
+        <label>Median Income (MedInc)</label>
+        <input type="number" step="any" name="MedInc" required>
+
+        <label>House Age (HouseAge)</label>
+        <input type="number" step="any" name="HouseAge" required>
+
+        <label>Average Rooms (AveRooms)</label>
+        <input type="number" step="any" name="AveRooms" required>
+
+        <label>Average Bedrooms (AveBedrms)</label>
+        <input type="number" step="any" name="AveBedrms" required>
+
+        <label>Population</label>
+        <input type="number" step="any" name="Population" required>
+
+        <label>Average Occupancy (AveOccup)</label>
+        <input type="number" step="any" name="AveOccup" required>
+
+        <label>Latitude</label>
+        <input type="number" step="any" name="Latitude" required>
+
+        <label>Longitude</label>
+        <input type="number" step="any" name="Longitude" required>
+
+        <button type="submit">Predict House Price</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <h2>Predicted House Price</h2>
+            <p>{{ prediction }}</p>
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+    {% endif %}
+</div>
+</body>
+</html>
